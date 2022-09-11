@@ -2,7 +2,7 @@
 //  SwiftUIAPITest1Tests.swift
 //  SwiftUIAPITest1Tests
 //
-//  Created by 太田修平 on 2022/09/11.
+//  Created by Shuhei Ota on 2022/09/11.
 //
 
 import XCTest
