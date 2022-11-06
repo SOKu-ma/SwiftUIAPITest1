@@ -13,23 +13,32 @@ struct ContentView: View {
     
     var body: some View {
         
-        //        ForEach (list, id: \.self) {
-        //        }
         NavigationView {
-            ZStack {
-//                ForEach () {
-//                    
-//                }
-                List {
-                    Text("aaa")
-                    Text("bbb")
-                    Text("ccc")
+            VStack(alignment: .center) {
+                
+                VStack {
+                    TextField("キーワード", text: $vm.textField)
+                        .onChange(of: vm.textField) { text in
+                            print("キーワード： \(text)")
+                            vm.Search(query: text)
+                        }
+                    Divider()
                 }
+                .padding(20)
+                
+                List {
+                    ForEach(vm.repoList, id: \.self) { repo in
+                        VStack(alignment: .leading) {
+                            Text("リポジトリ：\(repo.name)")
+                            Text("URL：\(repo.html_url)")
+                            Text("言語：\(repo.language)")
+                        }
+                    }
+                }
+                .navigationTitle("GitHub API")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("GitHub API")
-            
         }
-        
     }
 }
 

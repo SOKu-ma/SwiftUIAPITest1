@@ -15,8 +15,9 @@
 		051C8E5728CE1238001F32AA /* SwiftUIAPITest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E5628CE1238001F32AA /* SwiftUIAPITest1UITests.swift */; };
 		051C8E5928CE1238001F32AA /* SwiftUIAPITest1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E5828CE1238001F32AA /* SwiftUIAPITest1UITestsLaunchTests.swift */; };
 		051C8E6728CE1443001F32AA /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6628CE1443001F32AA /* ContentViewModel.swift */; };
-		051C8E6A28CE14A7001F32AA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6928CE14A7001F32AA /* APIClient.swift */; };
-		051C8E6D28CE1C32001F32AA /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6C28CE1C32001F32AA /* GithubAPI.swift */; };
+		051C8E6A28CE14A7001F32AA /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6928CE14A7001F32AA /* GithubAPI.swift */; };
+		051C8E6D28CE1C32001F32AA /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6C28CE1C32001F32AA /* GithubRepository.swift */; };
+		055269A228CF86F80076189E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055269A128CF86F80076189E /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,9 @@
 		051C8E5628CE1238001F32AA /* SwiftUIAPITest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAPITest1UITests.swift; sourceTree = "<group>"; };
 		051C8E5828CE1238001F32AA /* SwiftUIAPITest1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAPITest1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		051C8E6628CE1443001F32AA /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		051C8E6928CE14A7001F32AA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		051C8E6C28CE1C32001F32AA /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		051C8E6928CE14A7001F32AA /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		051C8E6C28CE1C32001F32AA /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
+		055269A128CF86F80076189E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				051C8E3D28CE1237001F32AA /* ContentView.swift */,
+				055269A128CF86F80076189E /* TestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,7 +158,7 @@
 		051C8E6B28CE14AD001F32AA /* API */ = {
 			isa = PBXGroup;
 			children = (
-				051C8E6928CE14A7001F32AA /* APIClient.swift */,
+				051C8E6928CE14A7001F32AA /* GithubAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 		051C8E6E28CE1C48001F32AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				051C8E6C28CE1C32001F32AA /* GithubAPI.swift */,
+				051C8E6C28CE1C32001F32AA /* GithubRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,11 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				051C8E6D28CE1C32001F32AA /* GithubAPI.swift in Sources */,
+				055269A228CF86F80076189E /* TestView.swift in Sources */,
+				051C8E6D28CE1C32001F32AA /* GithubRepository.swift in Sources */,
 				051C8E3E28CE1237001F32AA /* ContentView.swift in Sources */,
 				051C8E3C28CE1237001F32AA /* SwiftUIAPITest1App.swift in Sources */,
 				051C8E6728CE1443001F32AA /* ContentViewModel.swift in Sources */,
-				051C8E6A28CE14A7001F32AA /* APIClient.swift in Sources */,
+				051C8E6A28CE14A7001F32AA /* GithubAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +473,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +503,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
