@@ -17,7 +17,9 @@
 		051C8E6728CE1443001F32AA /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6628CE1443001F32AA /* ContentViewModel.swift */; };
 		051C8E6A28CE14A7001F32AA /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6928CE14A7001F32AA /* GithubAPI.swift */; };
 		051C8E6D28CE1C32001F32AA /* GithubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C8E6C28CE1C32001F32AA /* GithubRepository.swift */; };
-		055269A228CF86F80076189E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055269A128CF86F80076189E /* TestView.swift */; };
+		055269A228CF86F80076189E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055269A128CF86F80076189E /* DetailView.swift */; };
+		05FB873929179B3C006CA722 /* TestGithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB873829179B3C006CA722 /* TestGithubAPI.swift */; };
+		05FB873B2917B23C006CA722 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB873A2917B23C006CA722 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,9 @@
 		051C8E6628CE1443001F32AA /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		051C8E6928CE14A7001F32AA /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		051C8E6C28CE1C32001F32AA /* GithubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepository.swift; sourceTree = "<group>"; };
-		055269A128CF86F80076189E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		055269A128CF86F80076189E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		05FB873829179B3C006CA722 /* TestGithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGithubAPI.swift; sourceTree = "<group>"; };
+		05FB873A2917B23C006CA722 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				051C8E4C28CE1238001F32AA /* SwiftUIAPITest1Tests.swift */,
+				05FB873829179B3C006CA722 /* TestGithubAPI.swift */,
 			);
 			path = SwiftUIAPITest1Tests;
 			sourceTree = "<group>";
@@ -142,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				051C8E3D28CE1237001F32AA /* ContentView.swift */,
-				055269A128CF86F80076189E /* TestView.swift */,
+				055269A128CF86F80076189E /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				051C8E6628CE1443001F32AA /* ContentViewModel.swift */,
+				05FB873A2917B23C006CA722 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,8 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055269A228CF86F80076189E /* TestView.swift in Sources */,
+				055269A228CF86F80076189E /* DetailView.swift in Sources */,
 				051C8E6D28CE1C32001F32AA /* GithubRepository.swift in Sources */,
+				05FB873B2917B23C006CA722 /* DetailViewModel.swift in Sources */,
 				051C8E3E28CE1237001F32AA /* ContentView.swift in Sources */,
 				051C8E3C28CE1237001F32AA /* SwiftUIAPITest1App.swift in Sources */,
 				051C8E6728CE1443001F32AA /* ContentViewModel.swift in Sources */,
@@ -315,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				051C8E4D28CE1238001F32AA /* SwiftUIAPITest1Tests.swift in Sources */,
+				05FB873929179B3C006CA722 /* TestGithubAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +511,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +534,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.SwiftUIAPITest1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,7 +554,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.SwiftUIAPITest1Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,6 +573,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.SwiftUIAPITest1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -583,6 +592,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56D5SSHUHW;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.SwiftUIAPITest1UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
