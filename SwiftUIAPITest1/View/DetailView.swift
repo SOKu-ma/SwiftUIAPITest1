@@ -10,7 +10,14 @@ import SwiftUI
 struct DetailView: View {
     
     var body: some View {
-        Text("詳細画面")
+        VStack {
+            Text("リポジトリ：")
+                .padding()
+            Text("URL：")
+                .padding()
+            Text("言語：")
+                .padding()
+        }
     }
 }
 

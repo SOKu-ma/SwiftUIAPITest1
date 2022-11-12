@@ -23,36 +23,33 @@ struct ContentView: View {
                 }
                 .padding(20)
                 
-                NavigationView {
-                    
-                    List {
-                        ForEach(0 ..< vm.repoList.count, id: \.self) { index in
-                            NavigationLink(destination: DetailView(),
-                                           isActive: $vm.isShowDetail,
-                                           label: {
-                                VStack(alignment: .leading) {
-                                    Text("リポジトリ：\(vm.repoList[index].name)")
-                                        .padding(.bottom)
-                                        .font(.callout)
-                                    Text("URL：\(vm.repoList[index].html_url)")
-                                        .padding(.bottom)
-                                        .font(.callout)
-                                    Text("言語：\(vm.repoList[index].language)")
-                                        .padding(.bottom)
-                                        .font(.callout)
-                                }
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    print("\(index)行目をタップ")
-                                    vm.ShowDetail()
-                                }
+                List {
+                    ForEach(0 ..< vm.repoList.count, id: \.self) { index in
+                        NavigationLink(destination: DetailView(),
+                                       isActive: $vm.isShowDetail,
+                                       label: {
+                            VStack(alignment: .leading) {
+                                Text("リポジトリ：\(vm.repoList[index].name)")
+                                    .padding(.bottom)
+                                    .font(.callout)
+                                Text("URL：\(vm.repoList[index].html_url)")
+                                    .padding(.bottom)
+                                    .font(.callout)
+                                Text("言語：\(vm.repoList[index].language)")
+                                    .padding(.bottom)
+                                    .font(.callout)
                             }
-                            )}
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                print("\(index)行目をタップ")
+                                vm.ShowDetail()
+                            }
+                        })
                     }
                 }
-                .navigationTitle("GitHub API")
-                .navigationBarTitleDisplayMode(.inline)
             }
+            .navigationTitle("GitHub API")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
